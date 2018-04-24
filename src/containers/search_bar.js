@@ -17,9 +17,11 @@ class SearchBar extends Component {
     this.setState({ term: event.target.value });
   }
 
+// NEXT: CHECK THAT FETCHWEATHER FUNCTION IS DOING WHAT IT'S SUPPOSED TO DO
+
   onFormSubmit(event) {
     event.preventDefault();
-
+    
     this.props.fetchWeather(this.state.term);
     this.setState({ term: '' });
   }
